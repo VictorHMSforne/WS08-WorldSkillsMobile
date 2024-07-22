@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WS.Views.PagePrincipal" Title="Consultório Médico">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bem-Vindo!" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Button x:Name="btnCadastrar" Text="Cadastrar" BackgroundColor="LightGreen" CornerRadius="20" Clicked="btnCadastrar_Clicked" FontAttributes="Bold"/>
+                <Button x:Name="btnListar" Text="Listagem" BackgroundColor="Aqua" CornerRadius="20" Clicked="btnListar_Clicked" FontAttributes="Bold"/>
+                <Button x:Name="btnSair" Text="Sair" BackgroundColor="IndianRed" CornerRadius="20" Clicked="btnSair_Clicked" FontAttributes="Bold"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WS.Views.PageCadastrar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nome:"/>
+            <Entry x:Name="txtNome" Placeholder="Digite o Nome do Médico"/>
+            <Label Text="Horário de Entrada:"/>
+            <Entry x:Name="txtHoraEntra" Placeholder="Digite o Horário de Entrada"/>
+            <Label Text="Horário de Saída:"/>
+            <Entry x:Name="txtHoraSai" Placeholder="Digite o Horário de Saída" />
+            <Button x:Name="btnCadastrar" Text="Cadastrar Médico" BackgroundColor="LightGreen" CornerRadius="20" Clicked="btnCadastrar_Clicked" FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
