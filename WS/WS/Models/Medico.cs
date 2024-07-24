@@ -10,14 +10,14 @@ namespace WS.Models
         [PrimaryKey,AutoIncrement,NotNull]
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string HorarioEntrada { get; set; }
-        public string HorarioSaida { get; set; }
+        public TimeSpan HorarioEntrada { get; set; }
+        public TimeSpan HorarioSaida { get; set; }
 
         public Medico() { // ajudando o BD a ler o Construtor
-            Id = 0;
-            Nome = "";
-            HorarioEntrada = "";
-            HorarioSaida = "";
+            this.Id = 0;
+            this.Nome = "";
+            this.HorarioEntrada = TimeSpan.Zero;
+            this.HorarioSaida = TimeSpan.Zero;
         }
     }
 }

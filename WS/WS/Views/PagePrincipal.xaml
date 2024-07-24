@@ -8,6 +8,7 @@
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                 <Button x:Name="btnCadastrar" Text="Cadastrar" BackgroundColor="LightGreen" CornerRadius="20" Clicked="btnCadastrar_Clicked" FontAttributes="Bold"/>
                 <Button x:Name="btnListar" Text="Listagem" BackgroundColor="Aqua" CornerRadius="20" Clicked="btnListar_Clicked" FontAttributes="Bold"/>
+                <Button x:Name="btnListarMistos" Text="Listagem de Turnos Mistos" BackgroundColor="MediumPurple" CornerRadius="20" Clicked="btnListarMistos_Clicked"  FontAttributes="Bold"/>
                 <Button x:Name="btnSair" Text="Sair" BackgroundColor="IndianRed" CornerRadius="20" Clicked="btnSair_Clicked" FontAttributes="Bold"/>
             </StackLayout>
         </StackLayout>

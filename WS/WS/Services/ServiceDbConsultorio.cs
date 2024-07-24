@@ -8,7 +8,7 @@ namespace WS.Services
 {
     public class ServiceDbConsultorio
     {
-        public SQLiteConnection conn;
+        SQLiteConnection conn;
 
         public ServiceDbConsultorio(string dbPath) // um metodo para abrir com o parâmetro do caminho do banco
         {
@@ -49,7 +49,15 @@ namespace WS.Services
         {
             try
             {
-                conn.Update(medico);
+                if (medico.Id == 0)
+                {
+                    throw new Exception("O Id do médico não pode ser zero.");
+                }
+               int result = conn.Update(medico);
+                if (result == 0)
+                {
+                    throw new Exception("Nenhum registro foi atualizado!");
+                }
             }
             catch (Exception er)
             {

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WS.Views.PageListaMisto" Title="Turnos Mistos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Listagem dos Turnos Mistos: " FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="2"/>
+            <Frame BackgroundColor="Transparent" BorderColor="White" CornerRadius="10" Margin="4.5" HeightRequest="560">
+                <ListView x:Name="lsvHistoricoMisto" Grid.Row="2" Grid.Column="0" HasUnevenRows="True" SeparatorColor="White" Margin="15" ItemSelected="lsvHistoricoMisto_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Nome, StringFormat='Nome: {0}'}" TextColor="White"/>
+                                        <Label Text="{Binding HorarioEntrada, StringFormat='Horário de Entrada: {0}'}" TextColor="White"/>
+                                        <Label Text="{Binding HorarioSaida, StringFormat='Horário de Saída: {0}'}" TextColor="White"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
+            <StackLayout>
+                <Button x:Name="btnVoltar" Text="Voltar" BackgroundColor="IndianRed" HorizontalOptions="Center" FontAttributes="Bold"  CornerRadius="20" Clicked="btnVoltar_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

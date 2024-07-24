@@ -30,5 +30,10 @@ namespace WS.Views
         {
             Environment.Exit(0);
         }
+
+        private void btnListarMistos_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageListaMisto());
+        }
     }
 }
